@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-eso-poc
+spec:
+  source:
+    repoURL: https://github.com/moolen/argocd-eso-poc.git
+    targetRevision: main
+    path: "./manifests"
