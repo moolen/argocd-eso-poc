@@ -3,7 +3,12 @@ kind: Application
 metadata:
   name: argocd-eso-poc
 spec:
+  project: default
+  destination:
+    namespace: "default"
+    server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/moolen/argocd-eso-poc.git
-    targetRevision: main
-    path: "./manifests"
+    targetRevision: HEAD
+    path: "manifests"
+
